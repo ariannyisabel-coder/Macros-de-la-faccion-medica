@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Macros</title>
+
+<style>
+body{
+    background:#f4f4f4;
+    font-family:Arial, sans-serif;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#dceeff;
+}
+
+#mensaje{
+    text-align:center;
+    color:green;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<h1> MACROS DE LA FACCIÓN MEDICA 🩺 </h1>
+
+<button onclick="copiar('/me HOLA MI NOMBRE ES [Nombre del médico] [Rango del medico] DE SERVICIOS MEDICOS DE LYNWOOD.')">
+✅ Presentación medica.
+</button>
+
+<button onclick="copiar('/flobby [10-8] EN SERVICIO LABORAL.')">
+✅ En servicio laboral
+</button>
+
+<button onclick="copiar('/flobby [10-7] FUERA DE SERVICIO.')">
+✅ Fuera de servicio laboral
+</button>
+
+<button onclick="copiar('/flobby [10-4] ENTENDIDO O DE ACUERDO.')">
+✅ 10-4
+</button>
+
+<button onclick="copiar('/flobby PREPARANDO VEHÍCULO MÉDICO.')">
+🚑 Preparando vehículo médico 
+</button>
+
+<button onclick="copiar('/do CAMARA DE CUERPO ENCENDÍDA.')">
+📸 Camara corporal encendida
+</button>
+
+<button onclick="copiar('/do ENCENDER SIRENAS [LLAMADA DE EMERGENCIA EN CURSO] .')">
+🚨 Encender sirenas / Activar llamadas de emergencia 
+</button>
+
+<button onclick="copiar('/flobby EN RUTA A LA LLAMADA DE EMERGENCIA.')">
+🚑 En ruta a la llamada de emergencia!
+</button>
+
+<button onclick="copiar('/flobby EN LOCALIZACIÓN DE LA EMERGENCIA.')">
+📍 En localización de la emergencia!
+</button>
+
+<button onclick="copiar('/me EMERGENCIA MÉDICA DE LYNWOOD HA LLEGADO POR FAVOR MANTENGA LA CALMA.')">
+📍 Emergencia médica de lynwood ha llegado
+</button>
+
+<button onclick="copiar('/me POR FAVOR DESPEJE LA ZONA PERSONA HERIDA.')">
+📍 Despejar la zona persona herida
+</button>
+
+<button onclick="copiar('/do INICIAR ACCESO A SIGNOS VITALES DEL PACIENTE.')">
+🩺 Iniciar acceso a los signos vitales del paciente 
+</button>
+
+<button onclick="copiar('/do APLICAR BOTIQUIN Y HACER PRIMEROS AUXILIOS AL PACIENTE.')">
+🧰 Aplicar botiquín de primeros auxilios al paciente
+</button>
+
+<button onclick="copiar('/do ADMINISTRAR MEDICAMENTOS AL PACIENTE.')">
+🧰 Administrar medicamentos
+</button>
+
+<button onclick="copiar('/flobby  [CODIGO VERDE] TODAS LAS LLAMADAS HAN SIDO RESUELTAS.')">
+✅ Todas las llamadas han sido atendidas 
+</button>
+
+<button onclick="copiar('/me LOS MEDICOS NO TE AYUDARAN DURANTE UNA BALACERA O ZONA DE RIESGO PARA EL PERSONAL MEDICO.')">
+⚠️ Los medicos no te ayudaran durante balaceras o zona de riesgo.
+</button>
+
+<button onclick="copiar('/flobby EN RUTA A LA ENTREGA DE MEDICAMENTOS / TRABAJO UNIDAD MEDICA MOVIL.')">
+🚑 Entrega de medicamentos / unidad médica movil
+</button>
+
+<button onclick="copiar('/do PREPARANDO TAZER DE MANERA PREVENTIVA PARA RESGUARDO DE LA INTEGRIDAD MEDICA.')">
+🩸 Preparando tazer de manera preventiva para resguardo de la integridad medica
+</button>
+
+<button onclick="copiar('/do TAZER! TAZER! TAZER! PARA ESCAPAR DEL PELIGRO.')">
+‼️ Tazer tazer tazer para escapar del peligro!
+</button>
+
+<button onclick="copiar('/flobby [CODIGO ROJO] SALA DE HOSPITAL FUERA DE CONTROL.')">
+‼️ Codigo rojo, sala de hospital fuera de control.
+</button>
+
+<button onclick="copiar('/flobby [CODIGO AZUL] SE REQUIERE OFICIAL EN EL HOSPITAL PERSONA FUERA DE CONTROL O NO ABANDONA EL HOSPITAL.')">
+👮‍♀️ Codigo azul, se requiere oficial en el hospital personas fuera de control.
+</button>
+
+<button onclick="copiar('/flobby SOLICITO PERMISO PARA REALIZAR RCP CON UN INSTRUCTOR.')">
+🚑 Solicito permiso para salir a hacer Rcp con instructor.
+</button>
+
+<button onclick="copiar('/flobby IGNORAR LO ANUNCIADO O LO SIGUIENTE.')">
+‼️ Ignorar lo anunciado 
+</button>
+
+<p id="mensaje"></p>
+
+<script>
+function copiar(texto){
+    navigator.clipboard.writeText(texto);
+    document.getElementById("mensaje").innerText="✅ Macro copiada";
+    setTimeout(()=>{
+        document.getElementById("mensaje").innerText="";
+    },1500);
+}
+</script>
+
+</body>
+</html>
